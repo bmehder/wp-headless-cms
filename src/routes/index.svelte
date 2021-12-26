@@ -12,13 +12,22 @@
 </script>
 
 <script>
+  import { fly } from 'svelte/transition'
+  import Card from '$lib/Card.svelte'
+
   export let posts
 </script>
 
-<h1>Headless WerdPress</h1>
-{#each posts as { image, title, excerpt, slug }}
-  <h2>{@html title.rendered}</h2>
-  <img src={image} alt={title.rendered} />
-  <p>{@html excerpt.rendered}</p>
-  <a href={`/posts/${slug}`}>Read More</a>
-{/each}
+<main transition:fly={{ x: -800, y: 0 }}>
+  <Card {posts} />
+</main>
+
+<style>
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4rem;
+    margin: 4rem auto;
+  }
+</style>

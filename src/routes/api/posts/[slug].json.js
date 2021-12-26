@@ -10,6 +10,7 @@ export const get = async request => {
 
   post.image = post._embedded['wp:featuredmedia'][0].source_url
   post.author = post._embedded.author[0].name
+  post.date = new Date(post.date).toDateString().slice(0, 15)
 
   return {
     status: 200,
