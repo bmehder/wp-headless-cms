@@ -1,26 +1,25 @@
 <script context="module">
   export const load = async ({ fetch }) => {
-    const res = await fetch('/api/pages')
-    const pages = await res.json()
+    const res = await fetch('/api/posts')
+    const posts = await res.json()
 
     return {
       props: {
-        pages,
+        posts,
       },
     }
   }
 </script>
 
 <script>
-  export let pages
+  import { fly } from 'svelte/transition'
+  import Card from '$lib/Card.svelte'
+
+  export let posts
 </script>
 
-<main>
-  <ul>
-    {#each pages as page}
-      <li><a href={`/pages/${page.slug}`}>{page.title.rendered}</a></li>
-    {/each}
-  </ul>
+<main transition:fly={{ x: -800, y: 0 }}>
+  <Card {posts} />
 </main>
 
 <style>

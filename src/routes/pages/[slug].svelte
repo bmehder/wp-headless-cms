@@ -2,12 +2,13 @@
   export const load = async ({ page, fetch }) => {
     const slug = page.params.slug
 
-    const res = await fetch(`/api/posts/${slug}`)
-    const post = await res.json()
+    const res = await fetch(`/api/pages/${slug}`)
+    const _page = await res.json()
+    console.log(_page)
 
     return {
       props: {
-        post,
+        _page,
       },
     }
   }
@@ -16,19 +17,12 @@
 <script>
   import { fly } from 'svelte/transition'
 
-  export let post
+  export let _page
 </script>
 
 <main transition:fly={{ x: -800, y: 0 }}>
-  <h1>{@html post.title.rendered}</h1>
-  <p>
-    <small>Published on: {post.date}</small><br /><small>by {post.author}</small
-    >
-  </p>
-  {#if post.image}
-    <img src={post.image} alt={post.title.rendered} />
-  {/if}
-  <p>{@html post.content.rendered}</p>
+  <h1>{@html _page.title.rendered}</h1>
+  <article>{@html _page.content.rendered}</article>
 </main>
 
 <style>

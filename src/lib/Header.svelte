@@ -8,6 +8,7 @@
   <nav class="main">
     <ul class:uppercase>
       <li><a href="/">Home</a></li>
+      <li><a href="/blog">Blog</a></li>
     </ul>
   </nav>
 </header>
