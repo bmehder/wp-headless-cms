@@ -4,7 +4,6 @@
 
     const res = await fetch(`/api/pages/${slug}`)
     const _page = await res.json()
-    console.log(_page)
 
     return {
       props: {
@@ -18,11 +17,13 @@
   import { fly } from 'svelte/transition'
 
   export let _page
+
+  const page = _page
 </script>
 
 <main transition:fly={{ x: -800, y: 0 }}>
-  <h1>{@html _page.title.rendered}</h1>
-  <article>{@html _page.content.rendered}</article>
+  <h1>{@html page.title.rendered}</h1>
+  <article>{@html page.content.rendered}</article>
 </main>
 
 <style>

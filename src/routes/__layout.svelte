@@ -3,10 +3,9 @@
 </script>
 
 <Header background="#016" color="white" />
+
 <div class="wrapper">
-  <div>
-    <slot />
-  </div>
+  <slot />
 </div>
 
 <style>
