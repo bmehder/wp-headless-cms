@@ -33,7 +33,22 @@
     line-height: 1.5em;
     overflow: hidden;
   }
+  :global(figure) {
+    margin: 0;
+    padding: 0;
+  }
   h1 {
     line-height: 1.25em;
+  }
+  :global(blockquote) {
+    margin: 0;
+    padding: 2rem 4rem;
+    background: #016;
+    color: white;
+    font-style: italic;
+  }
+  :global(cite) {
+    display: block;
+    margin-top: 1rem;
   }
 </style>
