@@ -3,11 +3,11 @@
     const slug = page.params.slug
 
     const res = await fetch(`/api/pages/${slug}`)
-    const _page = await res.json()
+    const data = await res.json()
 
     return {
       props: {
-        _page,
+        page: data,
       },
     }
   }
@@ -16,9 +16,7 @@
 <script>
   import { fly } from 'svelte/transition'
 
-  export let _page
-
-  const page = _page
+  export let page
 </script>
 
 <main transition:fly={{ x: -800, y: 0 }}>
