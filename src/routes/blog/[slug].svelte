@@ -2,7 +2,7 @@
   export const load = async ({ page, fetch }) => {
     const slug = page.params.slug
 
-    const res = await fetch(`/api/posts/${slug}`)
+    const res = await fetch(`../api/posts/${slug}`)
     const post = await res.json()
 
     return {

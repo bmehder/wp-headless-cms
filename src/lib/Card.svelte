@@ -4,14 +4,14 @@
 
 {#each posts as { image, title, excerpt, slug }}
   <article>
-    <a href={`/posts/${slug}`}><img src={image} alt={title.rendered} /></a>
+    <a href={`/blog/${slug}`}><img src={image} alt={title.rendered} /></a>
     <h2>
-      <a href={`/posts/${slug}`}>{@html title.rendered}</a>
+      <a href={`/blog/${slug}`}>{@html title.rendered}</a>
     </h2>
     <div>
       <p>{@html excerpt.rendered}</p>
     </div>
-    <a class="read-more" href={`/posts/${slug}`}>Read More</a>
+    <a class="read-more" href={`/blog/${slug}`}>Read More</a>
   </article>
 {/each}
 
