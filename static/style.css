@@ -1,0 +1,27 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  line-height: 1.25em;
+}
+
+blockquote {
+  margin: 0;
+  padding: 2rem 4rem;
+  background: #016;
+  color: white;
+  font-style: italic;
+}
+
+cite {
+  display: block;
+  margin-top: 1rem;
+}
+
+#services-submenu {
+  margin-bottom: 1em;
+}

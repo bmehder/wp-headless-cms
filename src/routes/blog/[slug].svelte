@@ -37,7 +37,4 @@
     line-height: 1.5em;
     overflow: hidden;
   }
-  h1 {
-    line-height: 1.25em;
-  }
 </style>
