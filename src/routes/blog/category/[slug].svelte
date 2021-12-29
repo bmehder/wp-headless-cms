@@ -1,8 +1,8 @@
 <script context="module">
   export const load = async ({ page, fetch }) => {
-    const id = page.params.id
+    const slug = page.params.slug
 
-    const res = await fetch(`../../api/posts/category/${id}`)
+    const res = await fetch(`../../api/posts/category/${slug}`)
     const posts = await res.json()
 
     return {
