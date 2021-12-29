@@ -12,13 +12,15 @@
 </script>
 
 <script>
-  export let pages
+  export let pages = []
 </script>
 
 <main>
   <ul>
     {#each pages as page}
-      <li><a href={`/pages/${page.slug}`}>{@html page.title.rendered}</a></li>
+      <li>
+        <a href={`/pages/${page.slug}`}>{@html page.title.rendered}</a>
+      </li>
     {/each}
   </ul>
 </main>

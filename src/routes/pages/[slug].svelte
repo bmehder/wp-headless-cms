@@ -14,12 +14,10 @@
 </script>
 
 <script>
-  import { fly } from 'svelte/transition'
-
   export let page
 </script>
 
-<main transition:fly={{ x: -800, y: 0 }}>
+<main>
   <h1>{@html page.title.rendered}</h1>
   <article>{@html page.content.rendered}</article>
 </main>

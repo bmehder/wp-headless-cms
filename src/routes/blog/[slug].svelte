@@ -14,12 +14,10 @@
 </script>
 
 <script>
-  import { fly } from 'svelte/transition'
-
   export let post
 </script>
 
-<main transition:fly={{ x: -800, y: 0 }}>
+<main>
   <h1>{@html post.title.rendered}</h1>
   <p>
     <small>Published on: {post.date}</small><br /><small>by {post.author}</small
