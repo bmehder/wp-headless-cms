@@ -3,11 +3,11 @@
     const slug = page.params.slug
 
     const res = await fetch(`../../api/posts/category/${slug}`)
-    const posts = await res.json()
+    const data = await res.json()
 
     return {
       props: {
-        posts,
+        posts: data,
       },
     }
   }
