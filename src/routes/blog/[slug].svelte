@@ -37,4 +37,7 @@
     line-height: 1.5em;
     overflow: hidden;
   }
+  img {
+    width: 100%;
+  }
 </style>
