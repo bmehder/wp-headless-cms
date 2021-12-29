@@ -8,7 +8,7 @@
   <nav class="main">
     <ul class:uppercase>
       <li><a href="/">Page List</a></li>
-      <li><a href="/blog">Blog</a></li>
+      <li><a href="/blog">Articles</a></li>
       <li><a href="/blog/category/press">Press</a></li>
       <li><a href="/blog/category/test">Test Cat</a></li>
     </ul>
